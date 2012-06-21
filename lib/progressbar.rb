@@ -52,7 +52,8 @@ class ProgressBar
   end
   
   def inner_bar
-    @bar_mark * [bar_width-1, 0].max + @bar_end_mark
+    (bar_width > 1 ? @bar_mark * (bar_width - 1) : "") + 
+      (bar_width > 0 ? @bar_end_mark : "")
   end
 
   def fmt_percentage
