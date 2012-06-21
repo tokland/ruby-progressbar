@@ -104,6 +104,7 @@ class ProgressBarTest < Test::Unit::TestCase
     total = 100
     pbar = do_make_progress_bar("test(alternate)", total)
     pbar.bar_mark = "="
+    pbar.bar_end_mark = ">"
     total.times {
       sleep(SleepUnit)
       pbar.inc
